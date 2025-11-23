@@ -7,14 +7,19 @@ public class Calculator {
     }
     public int div(int a, int b){
         if (b == 0) throw new ArithmeticException("Division by zero");
-        return a / b;
+        return  a / b;
     }
     public int times(int a, int b){
         return a * b;
     }
-    public int solver(int a, int b) {
-        // a*x + b = 0
-        int reuslt = div(add(0, -b), a);
-        return reuslt;
+    public int solver(int a, int b, int c){
+        int D = b * b - 4 * a * c;
+        if (D >= 0){
+            int x1 = (int) (-b + Math.sqrt(D));
+            int x2 = (int) (-b - Math.sqrt(D));
+            return x1 + x2;
+        }else {
+            throw new ArithmeticException("Cannot extract the root from a negative number");
+        }
     }
 }

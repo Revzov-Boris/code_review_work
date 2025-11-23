@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,6 +31,7 @@ class CalculatorTest {
 
     @Test
     void solver() {
-        Assertions.assertEquals(2, calculator.solver(2, -4));
+        Assertions.assertEquals(3, calculator.solver(1, -3, 2));
+        Assertions.assertThrows(ArithmeticException.class, () -> calculator.solver(1, -1, 1));
     }
 }
