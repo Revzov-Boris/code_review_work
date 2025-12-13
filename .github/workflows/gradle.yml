@@ -18,20 +18,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
-        java: [ 11, 13, 17 ]
-        include:
-          - os: ubuntu-latest
-            java: 13
-            distribution: 'zulu'
-          - os: macos-latest
-            java: 13
-            distribution: 'zulu'
-          - os: windows-latest
-            java: 13
-            distribution: 'zulu'
-        exclude:
-          - java: 13
-            distribution: 'temurin'  # Исключаем для Java 13
+        java: [ 11, 17, 21 ]
 
     runs-on: ${{ matrix.os }}
     permissions:
