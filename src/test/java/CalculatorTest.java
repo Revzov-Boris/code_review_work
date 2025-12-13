@@ -31,7 +31,7 @@ class CalculatorTest {
 
     @Test
     void solver() {
-        Assertions.assertEquals(3, calculator.solver(1, -3, 2));
-        Assertions.assertThrows(ArithmeticException.class, () -> calculator.solver(1, -1, 1));
+        Assertions.assertEquals(12, calculator.solver(5, -6, 1));
+        Assertions.assertThrows(ArithmeticException.class, () -> calculator.solver(6, -3, 2));
     }
 }
