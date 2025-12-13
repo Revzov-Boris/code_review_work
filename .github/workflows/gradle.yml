@@ -37,4 +37,4 @@ jobs:
       with:
         gradle-version: wrapper
     - name: Build with Gradle Wrapper and test
-      run: ./gradlew build
+      run: gradle build
