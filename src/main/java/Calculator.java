@@ -1,4 +1,5 @@
 public class Calculator {
+    // изменения для тестирования gitHub actions
     public int add(int a, int b){
         return a + b;
     }
