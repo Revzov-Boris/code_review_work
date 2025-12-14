@@ -18,7 +18,13 @@ jobs:
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
         java: [ 11, 13, 17 ]
-        distribution: ${{ matrix.java == '13' && 'zulu' || 'temurin' }}
+        include:
+          - java: 13
+            distribution: 'zulu'
+          - java: 11
+            distribution: 'temurin'
+          - java: 17
+            distribution: 'temurin'
 
     runs-on: ${{ matrix.os }}
     permissions:
